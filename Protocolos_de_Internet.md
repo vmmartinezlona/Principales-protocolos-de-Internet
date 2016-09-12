@@ -12,12 +12,12 @@ Permite a las aplicaciones comunicarse entre sí como si estuvieran conectadas f
 - Transmisión completa en orden de bytes.
 - Punto de fin, que cierra la conexión.
 
-      Puertos
-      Rango 1 al 1023:
-        1 – 255 puertos publicos
-        256 – 1023 puertos asignados a empresas
-      Rango 1024 al 49151 – asignados por IANA a especificas aplicaciones
-      Rango 49152 al 65535 – puertos dinámicos y privados
+       Puertos
+       Rango 1 al 1023:
+         1 – 255 puertos publicos
+         256 – 1023 puertos asignados a empresas
+       Rango 1024 al 49151 – asignados por IANA a especificas aplicaciones
+       Rango 49152 al 65535 – puertos dinámicos y privados
 
 
 - **Internet Protocol**
@@ -118,6 +118,8 @@ Protocolo que permite la conexión remota a otro ordenador y que permite manejar
  ---
 **Address Resolution Protocol** (protocolo de resolución de direcciones) ayuda al protocolo IP a dirigir los datagramas al sistema receptor adecuado asignando direcciones Ethernet a direcciones IP conocidas.
 
+Las peticiones ARP no se envían utilizando puertos.
+
 ### ICMP
  ---
 **Internet Control Messages Protocol** (protocolo de mensajes de control de Internet) detecta y registra las condiciones de error de la red.
@@ -125,3 +127,5 @@ ICMP registra:
 - Paquetes soltados: Paquetes que llegan demasiado rápido para poder procesarse.
 - Fallo de conectividad: No se puede alcanzar un sistema de destino.
 - Redirección: Redirige un sistema de envío para utilizar otro enrutador.
+
+ICMP no utiliza puertos.Se encapsula con solamente un datagrama IP. 
